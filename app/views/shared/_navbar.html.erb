@@ -1,0 +1,61 @@
+<!-- barra de navegação com as opções de ir para a página inicial, fazer login e se cadastrar para usuário ainda não logado -->
+<!-- ao logar, mostra as opções de ver saldo, extrato, sacar, depositar e transferir para usuários normais -->
+<!-- também mostra a opção de solicitar uma visita do gerente para usuários vip logados -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      <% if Current.user %>
+        <li class="nav-item">
+          <%= link_to "Saldo", balance_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Extrato", statement_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Saque", edit_withdraw_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Depósito", deposit_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Transferência", edit_transference_path, class: "nav-link" %>
+        </li>
+        <% if Current.user.isVip %>
+          <li class="nav-item">
+            <%= link_to "Gerente", manager_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Início", root_path, class: "nav-link" %>
+        </li>
+      <% end %>
+      </ul>
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <% if Current.user %>
+        <li class="nav-item">
+          <%= link_to Current.user.account, edit_password_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= button_to "Sair", logout_path, method: :delete, class: "btn btn-outline-secondary" %>
+        </li>
+        <% else %>
+        <li class="nav-item">
+          <%= link_to "Cadastrar-se", sign_up_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Entrar", sign_in_path, class: "nav-link" %>
+        </li>
+        <% end %>
+      </ul>
+
+    </div>
+  </div>
+</nav>

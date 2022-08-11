@@ -1,0 +1,29 @@
+<!-- permite que o usuário logado insira um valor para depositar na conta e apresenta opções de depositar novamente ou voltar para o saldo-->
+
+<h1 class="d-flex align-items-center justify-content-center">Depósito</h1>
+<br>
+<div class="mb-3">
+    <input id = "deposit_input_id" type="number", class="form-control", placeholder="R$ 0,00">
+</div>
+
+<div class="mb-3">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#depositModal" onclick="if(document.getElementById('deposit_input_id').value != ''){document.getElementById('deposit_msg_id').innerHTML = 'Você depositou R$ ' + document.getElementById('deposit_input_id').value + ' na sua conta.'; document.getElementById('depositModalLabel').innerHTML='Depósito realizado'}">Depositar</button>
+</div>
+
+<div class="modal fade" id="depositModal" tabindex="-1" aria-labelledby="depositModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="depositModalLabel">Depósito não realizado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="deposit_msg_id"class="modal-body">
+        Insira um valor para depositar.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"><a href="/balance" style="text-decoration:none; color:white">Finalizar depósitos</a></button>
+        <button type="button" class="btn btn-primary"><a href="/deposit" style="text-decoration:none; color:white">Depositar novamente</a></button>
+      </div>
+    </div>
+  </div>
+</div>

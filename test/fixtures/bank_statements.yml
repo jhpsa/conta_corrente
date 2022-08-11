@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2022-08-11
+  time: 2022-08-11 20:10:12
+  description: MyString
+  value: 1.5
+  account_id: 1
+
+two:
+  date: 2022-08-11
+  time: 2022-08-11 20:10:12
+  description: MyString
+  value: 1.5
+  account_id: 1

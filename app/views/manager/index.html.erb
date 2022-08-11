@@ -1,0 +1,44 @@
+<!-- permite que o usuário logado solicite a visita do gerente, avisa que sua conta será debitada e pede sua confirmação-->
+
+<h1 class="d-flex align-items-center justify-content-center">Gerente</h1>
+<br>
+
+<div class="d-flex align-items-center justify-content-center">
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#managerModal">Solicitar visita do gerente</button>
+</div>
+
+<div class="modal fade" id="managerModal" tabindex="-1" aria-labelledby="managerModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="managerModalLabel">Visita do gerente solicitada</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="deposit_msg_id"class="modal-body">
+        Serão debitados R$ 50,00 da sua conta.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"><a href="/balance" style="text-decoration:none; color:white">Cancelar solicitação</a></button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#managerOkModal">Confirmar solicitação</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="managerOkModal" tabindex="-1" aria-labelledby="managerOkModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="managerOkModalLabel">Visita do gerente confirmada</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="deposit_msg_id"class="modal-body">
+        Foram debitados R$ 50,00 da sua conta.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"><a href="/balance" style="text-decoration:none; color:white">Finalizar solicitação</a></button>
+        <button type="button" class="btn btn-primary"><a href="/manager" style="text-decoration:none; color:white">Solicitar visita novamente</a></button>
+      </div>
+    </div>
+  </div>
+</div>

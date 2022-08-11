@@ -1,0 +1,35 @@
+<!-- permite que o usuário insira um valor para transferir e uma conta destino para a transferência e apresenta opções de transferir novamente ou voltar para o saldo-->
+
+<h1 class="d-flex align-items-center justify-content-center">Transferência</h1>
+<br>
+<div class="mb-3">
+    <label>Conta</label>
+    <input id = "account_id", type="text", class="form-control", placeholder="12345">
+</div>
+
+<div class="mb-3">
+    <label>Valor</label>
+    <input id = "transference_input_id" type="number", class="form-control", placeholder="R$ 0,00">
+</div>
+
+<div class="mb-3">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#transferenceModal" onclick="if(document.getElementById('transference_input_id').value != ''){document.getElementById('transference_msg_id').innerHTML = 'Você transferiu R$ ' + document.getElementById('transference_input_id').value + ' para a conta ' + document.getElementById('account_id').value + '.'; document.getElementById('dtransferenceModalLabel').innerHTML='Transferência realizada'}">Transferir</button>
+</div>
+
+<div class="modal fade" id="transferenceModal" tabindex="-1" aria-labelledby="transferenceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="transferenceModalLabel">Transferência não realizada</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="transference_msg_id"class="modal-body">
+        Insira um valor para transferir.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"><a href="/balance" style="text-decoration:none; color:white">Finalizar transferências</a></button>
+        <button type="button" class="btn btn-primary"><a href="/transference" style="text-decoration:none; color:white">Transferir novamente</a></button>
+      </div>
+    </div>
+  </div>
+</div>

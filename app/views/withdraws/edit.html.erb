@@ -1,0 +1,29 @@
+<!-- permite que o usuário insira um valor para sacar da sua conta e apresenta opções de sacar novamente ou voltar para o saldo-->
+
+<h1 class="d-flex align-items-center justify-content-center">Saque</h1>
+<br>
+<div class="mb-3">
+    <input id = "withdraw_input_id" type="number", class="form-control", placeholder="R$ 0,00">
+</div>
+
+<div class="mb-3">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#withdrawModal" onclick="if(document.getElementById('withdraw_input_id').value != ''){document.getElementById('withdraw_msg_id').innerHTML = 'Você sacou R$ ' + document.getElementById('withdraw_input_id').value + ' da sua conta.'; document.getElementById('withdrawModalLabel').innerHTML='Saque realizado'}">Sacar</button>
+</div>
+
+<div class="modal fade" id="withdrawModal" tabindex="-1" aria-labelledby="withdrawModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="withdrawModalLabel">Saque não realizado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="withdraw_msg_id"class="modal-body">
+        Insira um valor para sacar.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"><a href="/balance" style="text-decoration:none; color:white">Finalizar saques</a></button>
+        <button type="button" class="btn btn-primary"><a href="/withdraw" style="text-decoration:none; color:white">Sacar novamente</a></button>
+      </div>
+    </div>
+  </div>
+</div>

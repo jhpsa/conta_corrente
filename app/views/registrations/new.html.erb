@@ -1,0 +1,32 @@
+<!-- permite que o usuário que ainda não possui uma conta crie uma e loga ele-->
+
+<h1>Cadastre-se</h1>
+
+<%= form_with model: @user, url: sign_up_path, local: true, data: { turbo: false } do |form| %>
+    <% if form.object.errors.any? %>
+        <div class="alert alert-danger">
+            <% form.object.errors.full_messages.each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+    <% end %>
+
+    <div class="mb-3">
+        <%= form.label :account, "Conta corrente" %>
+        <%= form.text_field :account, class: "form-control", placeholder: "12345"  %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :password, "Senha" %>
+        <%= form.password_field :password, class: "form-control", placeholder: "1234"  %>
+    </div>
+    
+    <div class="mb-3">
+        <%= form.label :password_confirmation, "Confirme a senha" %>
+        <%= form.password_field :password_confirmation, class: "form-control", placeholder: "1234"  %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.submit "Cadastrar-se", class: "btn btn-primary" %>
+    </div>
+<% end %>

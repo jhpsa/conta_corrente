@@ -1,0 +1,19 @@
+<!-- permite que o usuário que já possui uma conta cadastrada faça login -->
+
+<h1>Entre</h1>
+
+<%= form_with url: sign_in_path, local: true, data: { turbo: false } do |form|  %>
+    <div class="mb-3">
+        <%= form.label :account, "Conta corrente" %>
+        <%= form.text_field :account, class: "form-control", placeholder: "12345"  %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :password, "Senha" %>
+        <%= form.password_field :password, class: "form-control", placeholder: "1234"  %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.submit "Entrar", class: "btn btn-primary" %>
+    </div>
+<% end %>
