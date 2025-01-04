@@ -1,12 +1,12 @@
 # Gerenciador de conta corrente
 ## Projeto baseado em um desafio detalhado a seguir:
-### Identificação/Login do correntista 
+### Identificação/Login do correntista 
 
 entradas: conta corrente (5 dígitos) e senha (4 dígitos)
   
 Haverá pelo menos 2 correntistas "cadastrados". Pelo menos um correntista terá o perfil "Normal" e o outro terá o perfil "VIP".
 
-### Opções
+### Opções
 
   1. Ver Saldo
   2. Extrato
@@ -20,7 +20,7 @@ Haverá pelo menos 2 correntistas "cadastrados". Pelo menos um correntista terá
 Apenas o valor atualizado em R$.
 
 ### Extrato
-O extrato exibirá data, hora, descrição e valor (entre parênteses quando negativo) de cada movimentação.
+O extrato exibirá data, hora, descrição e valor (entre parênteses quando negativo) de cada movimentação.
 
 ### Saque
 O usuário Normal não pode sacar além do valor em saldo. O VIP pode, mas terá seu saldo reduzido em 0.1% por minuto até que sejam feitos depósitos suficientes para cobrir o saldo negativo.
@@ -32,7 +32,7 @@ Cada usuário poderá realizar transferências informando o valor e a conta co
 - O usuário Normal será debitado em R$8,00 por transferência e o VIP em 0,8% do valor transferido. Deverão ser destacados esses débitos no extrato.
 
 # Visita do gerente
-Apenas o usuário VIP pode ver a opção "Solicitar visita do gerente". Esta opção precisa ser confirmada pelo usuário e, após a confirmação, apenas debita R$50,00 da conta do usuário.
+Apenas o usuário VIP pode ver a opção "Solicitar visita do gerente". Esta opção precisa ser confirmada pelo usuário e, após a confirmação, apenas debita R$50,00 da conta do usuário.
 
 # Trocar de usuário
-Deve ser possível sair da conta de usuario e entrar em outro para verificar as movimentações.
+Deve ser possível sair da conta de usuario e entrar em outro para verificar as movimentações.
