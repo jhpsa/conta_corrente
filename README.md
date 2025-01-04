@@ -1,6 +1,8 @@
 # Gerenciador de conta corrente
-## - main.py: implementação do gerenciador de conta corrente
-## - Projeto baseado em um desafio detalhado a seguir:
+- main.py: implementação do gerenciador de conta corrente
+- cadastros.json: base de dados dos correntistas cadastrados e suas informações (obs: a única forma de um correntista ser VIP é alterando seu atributo VIP para true nesse arquivo)
+- movimentacoes.json: base de dados com as informações de todas as movimentações realizadas entre contas de correntistas
+## Projeto baseado em um desafio detalhado a seguir:
 ### Identificação/Login do correntista 
 
 entradas: conta corrente (5 dígitos) e senha (4 dígitos)
