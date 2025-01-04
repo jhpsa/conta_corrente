@@ -31,8 +31,8 @@ Cada usuário poderá realizar transferências informando o valor e a conta corr
 - O usuário Normal poderá fazer transferências de até R$1000,00. O VIP não terá limite. 
 - O usuário Normal será debitado em R$8,00 por transferência e o VIP em 0,8% do valor transferido. Deverão ser destacados esses débitos no extrato.
 
-# Visita do gerente
+### Visita do gerente
 Apenas o usuário VIP pode ver a opção "Solicitar visita do gerente". Esta opção precisa ser confirmada pelo usuário e, após a confirmação, apenas debita R$50,00 da conta do usuário.
 
-# Trocar de usuário
+### Trocar de usuário
 Deve ser possível sair da conta de usuario e entrar em outro para verificar as movimentações.
