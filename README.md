@@ -1,5 +1,6 @@
 # Gerenciador de conta corrente
-## Projeto baseado em um desafio detalhado a seguir:
+## - main.py: implementação do gerenciador de conta corrente
+## - Projeto baseado em um desafio detalhado a seguir:
 ### Identificação/Login do correntista 
 
 entradas: conta corrente (5 dígitos) e senha (4 dígitos)
