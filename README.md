@@ -20,16 +20,16 @@ Haverá pelo menos 2 correntistas "cadastrados". Pelo menos um correntista terá
 Apenas o valor atualizado em R$.
 
 ### Extrato
-O extrato exibirá data, hora, descrição e valor (entre parênteses quando negativo) de cada movimentação.
+O extrato exibirá data, hora, descrição e valor (entre parênteses quando negativo) de cada movimentação.
 
 ### Saque
 O usuário Normal não pode sacar além do valor em saldo. O VIP pode, mas terá seu saldo reduzido em 0.1% por minuto até que sejam feitos depósitos suficientes para cobrir o saldo negativo.
 
-### Transferências
-Cada usuário poderá realizar transferências informando o valor e a conta corrente do destinatário (não pode transferir para si mesmo nem para conta inexistente).
-- As transferências aparecerão nos extratos tanto do cedente quanto do sacado.
-- O usuário Normal poderá fazer transferências de até R$1000,00. O VIP não terá limite. 
-- O usuário Normal será debitado em R$8,00 por transferência e o VIP em 0,8% do valor transferido. Deverão ser destacados esses débitos no extrato.
+### Transferências
+Cada usuário poderá realizar transferências informando o valor e a conta corrente do destinatário (não pode transferir para si mesmo nem para conta inexistente).
+- As transferências aparecerão nos extratos tanto do cedente quanto do sacado.
+- O usuário Normal poderá fazer transferências de até R$1000,00. O VIP não terá limite. 
+- O usuário Normal será debitado em R$8,00 por transferência e o VIP em 0,8% do valor transferido. Deverão ser destacados esses débitos no extrato.
 
 # Visita do gerente
 Apenas o usuário VIP pode ver a opção "Solicitar visita do gerente". Esta opção precisa ser confirmada pelo usuário e, após a confirmação, apenas debita R$50,00 da conta do usuário.
